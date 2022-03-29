@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CMP1903M_Assessment_1_Base_Code.Input;
+using static CMP1903M_Assessment_1_Base_Code.Analyse;
+using static CMP1903M_Assessment_1_Base_Code.Report;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Analyse
     {
-        //Handles the analysis of text
-
+        Report report = new Report();
         //Method: analyseText
         //Arguments: string
         //Returns: list of integers
         //Calculates and returns an analysis of the text
-        public List<int> analyseText(string input)
+        public List<int> AnalyseText(string str)
         {
             //List of integers to hold the first five measurements:
             //1. Number of sentences
@@ -73,19 +75,21 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
                 List<int> values = new List<int>();
-            for(int i = 0; i<5; i++)
-            {
-                values.Add(0);
+                for (int i = 0; i < 5; i++)
+                {
+                    values.Add(0);
+                }
+                values[0] = numSentences;
+                values[1] = numVowels;
+                values[2] = numConsonants;
+                values[3] = numUppercase;
+                values[4] = numLowercase;
+                values[5] = numCharacter;
+
+                return values;
+                report.OutputConsole(values);
             }
-            values[0] = numSentences;
-            values[1] = numVowels;
-            values[2] = numConsonants;
-            values[3] = numUppercase;
-            values[4] = numLowercase;
-            values[5] = numCharacter;
 
-            return values;
         }
-
     }
 }
