@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     public class Input
     {
         //Handles the text input for Assessment 1
-        string text = "nothing";
+        string str = "nothing";
         
         //Method: manualTextInput
         //Arguments: none
@@ -17,8 +17,10 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from the keyboard
         public string manualTextInput()
         {
-
-            return text;
+            Console.WriteLine("Enter text... ")
+            str = Console.Readline();
+            analyse.analyseText(str);
+            return str;
         }
 
         //Method: fileTextInput
@@ -27,8 +29,8 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from a .txt file
         public string fileTextInput(string fileName)
         {
-
-            return text;
+            str = File.ReadAllText(fileName)
+            return str;
         }
 
     }
