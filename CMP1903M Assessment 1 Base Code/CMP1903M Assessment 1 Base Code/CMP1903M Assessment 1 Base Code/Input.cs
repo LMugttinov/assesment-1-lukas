@@ -3,33 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CMP1903M_Assessment_1_Base_Code.Input;
+using static CMP1903M_Assessment_1_Base_Code.Analyse;
+using static CMP1903M_Assessment_1_Base_Code.Report;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Input
     {
-        //Handles the text input for Assessment 1
+
         string str = "nothing";
         
-        //Method: manualTextInput
-        //Arguments: none
-        //Returns: string
-        //Gets text input from the keyboard
         public string manualTextInput()
         {
-            Console.WriteLine("Enter text... ")
-            str = Console.Readline();
-            analyse.analyseText(str);
+            Console.WriteLine("Enter text... ");
+            str = Console.ReadLine();
             return str;
         }
 
-        //Method: fileTextInput
-        //Arguments: string (the file path)
-        //Returns: string
-        //Gets text input from a .txt file
-        public string fileTextInput(string fileName)
+        public string fileTextInput(string file)
         {
-            str = File.ReadAllText(fileName)
+            str = File.ReadAllText(file);
             return str;
         }
 
