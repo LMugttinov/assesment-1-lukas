@@ -13,17 +13,16 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     class Program
     {
-        public static void Main()
+         static void Main()
         {
             Input input = new Input();
             Analyse analyse = new Analyse();
+            Report report = new Report();
 
             //define result integer
             string Result;
             //define a string that will be used for analysis
             string str;
-            //define a file that will turn into a string
-            string file;
 
             //gives the user the choice between the following
             Console.WriteLine("To pick your own TEXT being analysed please type 1");
@@ -34,16 +33,17 @@ namespace CMP1903M_Assessment_1_Base_Code
             //allows user to input any text if 1 was selected
             if (Result == ("1"))
             {
-                 str = input.manualTextInput();
-                = analyse.AnalyseText(str);
-                
+                 str = input.ManualTextInput();
+                analyse.AnalyseText(str);              
+
             }
             //locates file
             else if (Result == ("2"))
             {
-                Console.WriteLine("File Found");
-                str = input.fileTextInput("CMP1903M Assessment 1 Test File.txt");
-                 = analyse.AnalyseText(str);
+                Console.WriteLine("Reading File: CMP1903M Assessment 1 Test File.txt\n");
+                Console.WriteLine(input.fileTextInput("CMP1903M Assessment 1 Test File.txt"));
+                string File = input.fileTextInput("CMP1903M Assessment-1 Test File.txt");
+                 analyse.AnalyseText(File);
             }
             //if user used different characters outside of 1 or 2
             else
@@ -66,3 +66,4 @@ namespace CMP1903M_Assessment_1_Base_Code
     
     }
 }
+
