@@ -39,9 +39,10 @@ namespace CMP1903M_Assessment_1_Base_Code
             //locates file
             else if (Result == ("2"))
             {
+                //due to having problems with importing textfile i have included exception handling
                 try
                 {
-                    string File = input.fileTextInput("CMP1903M Assessment 1 Test File.txt");
+                    string File = input.FileTextInput("CMP1903M Assessment 1 Test File.txt");
                     analyse.AnalyseText(File);
                 }
                 catch (Exception ex)
