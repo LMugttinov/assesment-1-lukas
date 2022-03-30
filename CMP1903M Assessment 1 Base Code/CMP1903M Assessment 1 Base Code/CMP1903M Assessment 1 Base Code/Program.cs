@@ -1,3 +1,5 @@
+//Base code project for CMP1903M Assessment 1
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,14 +33,21 @@ namespace CMP1903M_Assessment_1_Base_Code
             //allows user to input any text if 1 was selected
             if (Result == ("1"))
             {
-                 str = input.ManualTextInput();
-                analyse.AnalyseText(str);              
+                str = input.ManualTextInput();
+                analyse.AnalyseText(str);
             }
             //locates file
             else if (Result == ("2"))
             {
-                string File = input.fileTextInput("CMP1903M Assessment 1 Test File.txt");
-                 analyse.AnalyseText(File);
+                try
+                {
+                    string File = input.fileTextInput("CMP1903M Assessment 1 Test File.txt");
+                    analyse.AnalyseText(File);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("the file was not found");
+                }
             }
             //if user used different characters outside of 1 or 2
             else
@@ -48,5 +57,3 @@ namespace CMP1903M_Assessment_1_Base_Code
         }   
     }
 }
-
-
