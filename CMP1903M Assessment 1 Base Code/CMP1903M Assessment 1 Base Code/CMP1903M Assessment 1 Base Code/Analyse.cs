@@ -11,7 +11,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Analyse
     {
-        Report report = new Report();
+        
         //Method: analyseText
         //Arguments: string
         //Returns: list of integers
@@ -21,6 +21,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             //List of integers to hold the first five measurements:
             //1. Number of sentences
             int numSentences = 0;
+            Report report = new Report();
             for (int i = 0; i < str.Length; i++)
             {
                 if (str[i] == '!' || str[i] == '.' || str[i] == '?')
@@ -75,21 +76,14 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
                 List<int> values = new List<int>();
-                for (int i = 0; i < 5; i++)
-                {
-                    values.Add(0);
-                }
-                values[0] = numSentences;
-                values[1] = numVowels;
-                values[2] = numConsonants;
-                values[3] = numUppercase;
-                values[4] = numLowercase;
-                values[5] = numCharacter;
+                //outputs all found values to Report
+                report.OutputConsole(numSentences, numVowels, numConsonants, numUppercase, numLowercase, numCharacter);
 
                 return values;
-                report.OutputConsole(values);
+                
             }
 
         }
     }
 }
+
