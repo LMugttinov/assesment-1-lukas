@@ -18,7 +18,6 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Calculates and returns an analysis of the text
         public List<int> AnalyseText(string str)
         {
-            //List of integers to hold the first five measurements:
             //1. Number of sentences
             int numSentences = 0;
             Report report = new Report();
