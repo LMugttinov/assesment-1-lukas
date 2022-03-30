@@ -1,5 +1,3 @@
-//Base code project for CMP1903M Assessment 1
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,14 +33,11 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                  str = input.ManualTextInput();
                 analyse.AnalyseText(str);              
-
             }
             //locates file
             else if (Result == ("2"))
             {
-                Console.WriteLine("Reading File: CMP1903M Assessment 1 Test File.txt\n");
-                Console.WriteLine(input.fileTextInput("CMP1903M Assessment 1 Test File.txt"));
-                string File = input.fileTextInput("CMP1903M Assessment-1 Test File.txt");
+                string File = input.fileTextInput("CMP1903M Assessment 1 Test File.txt");
                  analyse.AnalyseText(File);
             }
             //if user used different characters outside of 1 or 2
@@ -50,20 +45,8 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                 Console.WriteLine("please only enter values of 1 or 2!");
             }
-
-            //Receive a list of integers back
-
-
-            //Report the results of the analysis
-
-
-            //TO ADD: Get the frequency of individual letters?
-
-
-        }
-        
-        
-    
+        }   
     }
 }
+
 
