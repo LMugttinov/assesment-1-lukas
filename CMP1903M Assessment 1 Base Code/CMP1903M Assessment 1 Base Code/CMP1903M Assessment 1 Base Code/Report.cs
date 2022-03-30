@@ -14,14 +14,14 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Handles the reporting of the analysis
         //Maybe have different methods for different formats of output?
         //eg.   public void outputConsole(List<int>)
-        public void outputConsole(List<int> input)
+        public void OutputConsole(int numSentences, int numVowels, int numConsonants, int numUppercase, int numLowercase, int numCharacter)
         {
-            Console.WriteLine("Number of sentences: " + input[0]);
-            Console.WriteLine("Number of vowels: " + input[1]);
-            Console.WriteLine("Number of consonants: " + input[2]);
-            Console.WriteLine("Number of upper case letters: " + input[3]);
-            Console.WriteLine("Number of lower case letters: " + input[4]);
-            Console.WriteLine("Number of Characters: " + input[5]);
+            Console.WriteLine("Number of sentences: " +  numSentences);
+            Console.WriteLine("Number of vowels: " +  numVowels);
+            Console.WriteLine("Number of consonants: " +  numConsonants);
+            Console.WriteLine("Number of upper case letters: " +  numUppercase);
+            Console.WriteLine("Number of lower case letters: " +  numLowercase);
+            Console.WriteLine("Number of Characters: " +  numCharacter);
 
         }
     }
