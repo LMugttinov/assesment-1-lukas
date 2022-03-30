@@ -20,15 +20,17 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
                 //Asks user to type in text and will read value
                 Console.WriteLine("Remember to press enter after evry sentence, and use an * on a seperate line if youd like to end. Enter text... ");
+                //while loop so an asteriks can end the code and carry onto analysing
                 while (end == false)
                 {
                     str2 = Console.ReadLine();
                     str += str2;
-                    if (str2 != "*") ;
+                    if (str2 != "*") 
                     {
                         str2 = Console.ReadLine();
                         str += str2;
                     }
+                    //ends user input as asteriks was written
                     if (str2 == "*")
                     {
                     end = true;
@@ -38,9 +40,9 @@ namespace CMP1903M_Assessment_1_Base_Code
             return str;
             
         }
-        public string fileTextInput(string filename)
+        public string FileTextInput(string filename)
         {
-            //Finds file and reads file
+            //Finds file and reads it
             str = File.ReadAllText(filename);
             return str;
         }
