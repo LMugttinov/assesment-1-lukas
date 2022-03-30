@@ -19,7 +19,16 @@ namespace CMP1903M_Assessment_1_Base_Code
             //Asks user to type in text and will read value
             Console.WriteLine("Enter text... ");
             str = Console.ReadLine();
-            return str;
+            char lastCharacter = str[str.Length - 1];
+            if (lastCharacter == "*")
+            {
+                return str;
+
+            }
+            else
+            {
+               string str2 = str
+            }
         }
         public string fileTextInput(string filename)
         {
