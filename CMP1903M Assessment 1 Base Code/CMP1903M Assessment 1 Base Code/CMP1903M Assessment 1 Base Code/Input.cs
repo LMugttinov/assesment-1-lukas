@@ -13,22 +13,30 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         //define String
         string str = "";
-        
+        string str2 = "";
+        bool end = false;
+
         public string ManualTextInput()
         {
-            //Asks user to type in text and will read value
-            Console.WriteLine("Enter text... ");
-            str = Console.ReadLine();
-            char lastCharacter = str[str.Length - 1];
-            if (lastCharacter == "*")
-            {
-                return str;
-
-            }
-            else
-            {
-               string str2 = str
-            }
+                //Asks user to type in text and will read value
+                Console.WriteLine("Remember to press enter after evry sentence, and use an * on a seperate line if youd like to end. Enter text... ");
+                while (end == false)
+                {
+                    str2 = Console.ReadLine();
+                    str += str2;
+                    if (str2 != "*") ;
+                    {
+                        str2 = Console.ReadLine();
+                        str += str2;
+                    }
+                    if (str2 == "*")
+                    {
+                    end = true;
+                    return str;
+                    }
+                }
+            return str;
+            
         }
         public string fileTextInput(string filename)
         {
