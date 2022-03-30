@@ -11,19 +11,20 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     public class Input
     {
-
-        string str = "nothing";
+        //define String
+        string str = "";
         
-        public string manualTextInput()
+        public string ManualTextInput()
         {
+            //Asks user to type in text and will read value
             Console.WriteLine("Enter text... ");
             str = Console.ReadLine();
             return str;
         }
-
-        public string fileTextInput(string file)
+        public string fileTextInput(string filename)
         {
-            str = File.ReadAllText(file);
+            //Finds file and reads file
+            str = File.ReadAllText(filename);
             return str;
         }
 
